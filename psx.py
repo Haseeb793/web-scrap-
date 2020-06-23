@@ -15,6 +15,7 @@ list_header = []
 soup = BeautifulSoup( contents ,'html.parser')
 header = soup.find_all(class_="market-overview")[0].find("tr") 
 
+#for getting header row 
 for items in header: 
     try: 
         list_header.append(items.get_text()) 
